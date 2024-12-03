@@ -6,25 +6,16 @@ import whiteVideo from '../videos/whitebox.mp4'
 
 export default function Home() {
     const navigate = useNavigate();
+    const pinkText = [`It's been hard since they left,\nTo find the motivation to do, not for lack of trying`,
+        `I feel so far removed from everything that has shaped me,\nAnd it's liberating\nAt the same time,\nI wish I could stop caring so much,\nAbout what I must be.`,
+        `I find belonging in the arms of a guy I met last week,\nIn the smile of a girl\nWho I was convinced could never see me that way -\nI'm so glad she called me out on our first date.`,
+        `I want to be present,\nTo live in a room that is all mine,\nIn a place that I am not deeply afraid to exist in.\n`]
 
-    const pinkText = `
-    It’s been hard since they left,
-To find the motivation to do, not for lack of trying 
- 
-I feel so far removed from everything that has shaped me,
-And it’s liberating
-At the same time,
-I wish I could stop caring so much,
-About what I must be.
- 
-I find belonging in the arms of a guy I met last week,
-In the smile of a girl
-Who I was convinced could never see me that way –
-I’m so glad she called me out on our first date.
- 
-I want to be present,
-To live in a room that is all mine,
-In a place that I am not deeply afraid to exist in.`
+
+    
+
+
+
 
     const blueText = `
 She can’t even look at me.
