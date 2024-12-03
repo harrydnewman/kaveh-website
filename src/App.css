@@ -1,7 +1,7 @@
 #root {
   /* max-width: 1280px; */
   /* text-align: center; */
-  max-height: vh;
+  /* max-height: vh; */
   overflow: hidden;
 }
 
@@ -13,7 +13,22 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  /* font-size: 2rem;
+    font-weight: bold;
+    background: rgb(91, 206, 250);
+    background: linear-gradient(0deg, rgba(91, 206, 250, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(245, 169, 184, 1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: background-position 0.5s ease-in-out;
+    background-size: 200%;
+    background-position: 0 50%; */
 }
+
+.mainText:hover {
+  /* background-position: 100% 50%; */
+}
+
 
 .mainText h1 {
   padding: 0;
@@ -21,23 +36,42 @@
   text-align: center;
   color: white;
   font-family: "VT323", serif;
+  font-size: 65px;
   font-weight: 400;
   font-style: normal;
+  padding-bottom: 3%;
+  
 }
+
+.buttons {
+  height: 100%;
+  width: 100%;
+}
+
+
 .pink-button {
-  background-color: pink;
+  background-color: rgba(245, 169, 184, 1);
   position: fixed;
-  left: 229px;
+  left: 9%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 265px;
-  height: 330px;
+  width: 16%;
+  height: 38%;
   padding: 0;
   margin: 0;
   top: 0;
 }
+
+.pink-button:hover {
+  border-left: 4px solid rgb(188, 101, 119);
+  border-right: 4px solid rgb(188, 101, 119);
+  border-bottom: 4px solid rgb(188, 101, 119);
+  border-radius: 1px;
+  cursor: pointer;
+}
+
 
 .white-button {
   background-color: white;
@@ -46,25 +80,56 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: 394px;
-  height: 300px;
+  justify-content: start;
+  width: 30%;
+  height: 43%;
   padding: 0;
   margin: 0;
-  left: 494px;
+  left: 16%;
+}
+
+.white-button:hover {
+  border-left: 4px solid  rgb(160, 160, 160);
+  border-right: 4px solid  rgb(160, 160, 160);
+  border-top: 4px solid  rgb(160, 160, 160);
+  border-radius: 1px;
+  cursor: pointer;
 }
 
 .blue-button {
-  background-color: lightblue;
+  background-color: rgba(91, 206, 250, 1);
   position: fixed;
-  top: 417px;
+  top: 58%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 533px;
-  height: 133px;
+  width: 35%;
+  height: 12%;
   padding: 0;
   margin: 0;
   right: 0px;
 }
+
+.blue-button:hover {
+  border-left: 4px solid rgb(67, 155, 189);
+  border-top: 4px solid rgb(67, 155, 189);
+  border-bottom: 4px solid rgb(67, 155, 189);
+  border-radius: 1px;
+  cursor: pointer;
+}
+
+.pink-button p,
+.blue-button p,
+.white-button p {
+  text-align: center;
+  color: black;
+  font-family: "VT323", serif;
+  font-size: 32px;
+  padding: 5px;
+}
+
+.white-button p {
+  font-size: 30px !important;
+}
+

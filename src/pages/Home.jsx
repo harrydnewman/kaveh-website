@@ -26,7 +26,7 @@ I want to be present,
 To live in a room that is all mine,
 In a place that I am not deeply afraid to exist in.`
 
-const blueText = `
+    const blueText = `
 She can’t even look at me.
 What scares you?
 Am I too much of a fag for your liking?
@@ -46,7 +46,7 @@ The feeling’s mostly mutual.
 (but I do miss you sometimes)
  `
 
-const whiteText = `
+    const whiteText = `
 I feel like a bad relative,
 We grew up together-
 She saw me at my lowest,
@@ -97,30 +97,25 @@ And I feel this weight for the (necessary) distance I have wedged between myself
         navigate('/video', { state: { video: blueVideo, text: blueText, color: "blue" } });
     }
 
-    // const moreButton = (text, color) => {
-    //     navigate('/info', { state: { text: text, color: color } });
-    // }
-
-    // const moreButton = (text, color) => {
-    //     navigate('/info', { state: { text: text, color: color } });
-    // }
+    const whiteButton = () => {
+        navigate('/video', { state: { video: whiteVideo, text: blueText, color: "blue" } });
+    }
     return (
         <div>
             <div className='mainText'>
-                <h1>You can choose how you experience my story</h1>
+                <h1>You can choose how you experience the work</h1>
             </div>
-            <div className='buttons'>
-                <div onClick={() => pinkButton()} className='pink-button'>
-                    <p>It (in a context I define for myself)</p>
-                </div>
+            {/* <div className='buttons'>
                 <div onClick={() => blueButton()} className='blue-button'>
                     <p>(but i do miss you sometimes)</p>
                 </div>
-                <div className='white-button'>
+                <div onClick={() => pinkButton()} className='pink-button'>
+                    <p>It (in a context I define for myself)</p>
+                </div>
+                <div onClick={() => whiteButton()} className='white-button'>
                     <p>I feel like a bad family member [for the (necessary) distance]</p>
                 </div>
-            </div>
+            </div> */}
         </div>
-
     )
 }
