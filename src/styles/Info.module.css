@@ -1,4 +1,40 @@
+.bluePinkPage {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.textHolder {
+    width: 75%;
+    height: 70%;
+    padding: 0;
+    margin: 0;
+}
+
 .pinkText {
-    color: pink;
-    
+    color: pink; 
+    font-family: "VT323", serif; 
+    font-size: 30px;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.blueText {
+    color: lightblue; 
+    font-family: "VT323", serif; 
+    font-size: 30px;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+}
+
+.whitePage {
+    overflow: auto !important;
+    height: 100% !important;
 }

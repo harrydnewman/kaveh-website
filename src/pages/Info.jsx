@@ -1,43 +1,81 @@
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import styles from '../styles/Info.module.css';
-import React from "react";
+import React, { useEffect } from "react";
 
-export default function Info(){
-        const location = useLocation();
-        const { text, color } = location.state || {}; // Use default values if no state is passed
-        const items = [];
+export default function Info() {
+    const location = useLocation();
+    const navigate = useNavigate();
+    const { text, color } = location.state || {}; // Use default values if no state is passed
 
-        for (let i = 0; i < text.length; i++) {
-            items.push(<li key={i}>{text[i]}</li>);
-          }
-        
+    // Redirect to Home if color is not valid
+    useEffect(() => {
+        if (color !== "pink" && color !== "blue" && color !== "white") {
+            navigate("/"); // Redirect to Home
+        }
+    }, [color, navigate]);
 
-        // if (color == "pink"){
-        //     return ( 
-        //         <div style={{ color: color }}>
-        //             <p>{items}</p>
-        //         </div>
-        //     );
-        // }
-        if (color == "pink"){
-            return ( 
-                <div>
-      <h1>Fruits List</h1>
-      <ul>
-        {items.map((text, index) => (
-          <li key={index}>{text}</li>
-        ))}
-      </ul>
-    </div>
-            );
+    // Dynamically adjust #root styles for scrolling
+    useEffect(() => {
+        const rootElement = document.getElementById("root");
+
+        if (color === "white") {
+            rootElement.style.overflow = "auto"; // Enable scrolling
+            rootElement.style.height = "auto";   // Adjust height for content
+        } else {
+            rootElement.style.overflow = "hidden"; // Disable scrolling
+            rootElement.style.height = "100%";     // Reset height
         }
 
-        else {
-            return (
-                <div>
-                    <h1>BRUHHHH</h1>
+        return () => {
+            // Cleanup: reset styles when leaving the page
+            rootElement.style.overflow = "hidden";
+            rootElement.style.height = "100%";
+        };
+    }, [color]);
+
+    const renderTextWithLineBreaks = (content) => {
+        return content.split('\n').map((line, index) => (
+            <React.Fragment key={index}>
+                {line}
+                <br />
+            </React.Fragment>
+        ));
+    };
+
+    const paragraphs = Array.isArray(text)
+        ? text.map((item, index) => (
+            <p key={index}>{renderTextWithLineBreaks(item)}</p>
+        ))
+        : [];
+    if (color != "white") {
+        return (
+            <div className={styles.bluePinkPage}>
+                <div className={styles.textHolder}>
+                    {color === "pink" ? (
+                        <div className={styles.pinkText}>
+                            {paragraphs}
+                        </div>
+                    ) : color === "blue" ? (
+                        <div className={styles.blueText}>
+                            {paragraphs}
+                        </div>
+                    ) : (
+                        <div className={styles.defaultText}>
+                            <h1>BRUHHHH</h1>
+                        </div>
+                    )}
                 </div>
-            )
-        }
-        
+            </div>
+        );
+    }
+    else {
+        return (
+            <div className={styles.whitePage}>
+                {Array(100).fill("Hello World").map((text, index) => (
+                    <h1 key={index}>{text}</h1>
+                ))}
+            </div>
+        )
+    }
+
 }

@@ -8,7 +8,8 @@ export default function Video() {
     const { video, text, color } = location.state || {}; // Use default values if no state is passed
 
     const moreButton = (text, color) => {
-        navigate('/info', { state: { text: text, color: color } });
+        const link = `/info/${color}`
+        navigate(link, { state: { text: text, color: color } });
     }
 
     const backButton = () => {

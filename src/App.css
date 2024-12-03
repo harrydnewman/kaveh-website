@@ -5,6 +5,11 @@
   overflow: hidden;
 }
 
+.scrollable {
+  overflow: auto; 
+  height: 100%; 
+}
+
 .mainText {
   width: 100%;
   height: 100vh;
