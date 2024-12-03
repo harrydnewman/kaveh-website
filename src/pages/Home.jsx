@@ -17,54 +17,13 @@ export default function Home() {
         `And I guess you don't want to see me.\nThe feeling's mostly mutual.`,
         `(but I do miss you sometimes)`]
 
-    
-
-
-
-
-
-    const whiteText = `
-I feel like a bad relative,
-We grew up together-
-She saw me at my lowest,
-But that’s because I was never myself as a child,
-And by the time I could articulate the ways I felt about my body,
-They’d already decided I was a sin.
- 
-I put the distance there,
-Intentionally,
-to protect myself
-from the burn of every conservative agenda broadcasted on their story,
-desperate to convince me that I am wrong.
- 
-These people raised me –
-My grandparents,
-My aunts,
-My cousins, who are all older than me by no fault of my own.
-I missed Papa’s birthday,
-Then aunty Medo’s,
-Now, Tehani’s graduation
-
-Sometimes, I miss it.
-Till I remember how awful I felt around them,
- 
-Do I explain myself to them?
-Again?
-And, again,
-My mouth losing its will to utter any truth
-Confessions flying right over their heads
-Because they are happier that way
-And I have found my joy away from them.
- 
-I will always talk to Nana though,
-she may not know what I stand for, but in ways
-she knows who I am
-(because she asks).
- 
-I had always intended to go no contact with my family once I’d left,
-Now that occasion is here,
-And I feel this weight for the (necessary) distance I have wedged between myself and the people I once claimed as my own.
-`
+    const whiteText = [`I feel like a bad relative,\nWe grew up together-\nShe saw me at my lowest,\nBut that's because I was never myself as a child,\nAnd by the time I could articulate the ways I felt about my body,\nThey'd already decided I was a sin.`,
+        `I put the distance there,\nIntentionally,\nto protect myself\nfrom the burn of every conservative agenda broadcasted on their story,\ndesperate to convince me that I am wrong.`,
+        `These people raised me -\nMy grandparents,\nMy aunts,\nMy cousins, who are all older than me by no fault of my own.\nI missed Papa's birthday,\nThen aunty Medo's,\nNow, Tehani's graduation`,
+        `Sometimes, I miss it.\nTill I remember how awful I felt around them,`,
+        `Do I explain myself to them?\nAgain?\nAnd, again,\nMy mouth losing its will to utter any truth\nConfessions flying right over their heads\nBecause they are happier that way\nAnd I have found my joy away from them.`,
+        `I will always talk to Nana though,\nshe may not know what I stand for, but in ways\nshe knows who I am\n(because she asks).`,
+        `I had always intended to go no contact with my family once I'd left,\nNow that occasion is here,\nAnd I feel this weight for the (necessary) distance I have wedged between myself and the people I once claimed as my own.`]
 
     const pinkButton = () => {
         navigate('/video/pink', { state: { video: pinkVideo, text: pinkText, color: "pink" } });
@@ -75,7 +34,7 @@ And I feel this weight for the (necessary) distance I have wedged between myself
     }
 
     const whiteButton = () => {
-        navigate('/video/white', { state: { video: whiteVideo, text: blueText, color: "white" } });
+        navigate('/video/white', { state: { video: whiteVideo, text: whiteText, color: "white" } });
     }
 
     const aboutButton = () => {

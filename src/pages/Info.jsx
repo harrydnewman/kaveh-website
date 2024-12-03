@@ -71,11 +71,12 @@ export default function Info() {
     else {
         return (
             <div className={styles.whitePage}>
-                {Array(100).fill("Hello World").map((text, index) => (
-                    <h1 key={index}>{text}</h1>
-                ))}
+                <div className={styles.textHolder}>
+                    <div className={styles.whiteText}>
+                        {paragraphs}
+                    </div>
+                </div>
             </div>
         )
     }
-
 }
