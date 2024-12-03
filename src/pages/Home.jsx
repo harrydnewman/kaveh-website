@@ -100,12 +100,16 @@ And I feel this weight for the (necessary) distance I have wedged between myself
     const whiteButton = () => {
         navigate('/video', { state: { video: whiteVideo, text: blueText, color: "blue" } });
     }
+
+    const aboutButton = () => {
+        navigate('/about');
+    }
     return (
         <div>
             <div className='mainText'>
-                <h1>You can choose how you experience the work</h1>
+                <h1 onClick={() => aboutButton()}>You can choose how you experience the work</h1>
             </div>
-            {/* <div className='buttons'>
+            <div className='buttons'>
                 <div onClick={() => blueButton()} className='blue-button'>
                     <p>(but i do miss you sometimes)</p>
                 </div>
@@ -115,7 +119,7 @@ And I feel this weight for the (necessary) distance I have wedged between myself
                 <div onClick={() => whiteButton()} className='white-button'>
                     <p>I feel like a bad family member [for the (necessary) distance]</p>
                 </div>
-            </div> */}
+            </div>
         </div>
     )
 }
