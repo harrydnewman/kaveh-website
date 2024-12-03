@@ -19,7 +19,7 @@
 }
 
 .pinkText {
-    color: pink; 
+    color: rgba(245, 169, 184, 1); 
     font-family: "VT323", serif; 
     font-size: 40px;
     padding: 0;
@@ -28,7 +28,7 @@
 }
 
 .blueText {
-    color: lightblue; 
+    color: rgba(91, 206, 250, 1); 
     font-family: "VT323", serif; 
     font-size: 38px;
     padding: 0;
