@@ -93,6 +93,10 @@ And I feel this weight for the (necessary) distance I have wedged between myself
         navigate('/video', { state: { video: pinkVideo, text: pinkText, color: "pink" } });
     }
 
+    const blueButton = () => {
+        navigate('/video', { state: { video: blueVideo, text: blueText, color: "blue" } });
+    }
+
     // const moreButton = (text, color) => {
     //     navigate('/info', { state: { text: text, color: color } });
     // }
@@ -109,7 +113,7 @@ And I feel this weight for the (necessary) distance I have wedged between myself
                 <div onClick={() => pinkButton()} className='pink-button'>
                     <p>It (in a context I define for myself)</p>
                 </div>
-                <div className='blue-button'>
+                <div onClick={() => blueButton()} className='blue-button'>
                     <p>(but i do miss you sometimes)</p>
                 </div>
                 <div className='white-button'>

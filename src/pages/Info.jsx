@@ -1,13 +1,23 @@
 import { useLocation } from 'react-router-dom';
+import styles from '../styles/Info.module.css';
 
 export default function Info(){
         const location = useLocation();
         const { text, color } = location.state || {}; // Use default values if no state is passed
-    
-        return (
-            <div style={{ color: color }}>
-                <h1>I am the info page</h1>
-                <p>{text}</p>
-            </div>
-        );
+
+        if (color == "pink"){
+            return (
+                <div style={{ color: color }}>
+                    <p>{text}</p>
+                </div>
+            );
+        }
+        else {
+            return (
+                <div>
+                    <h1>BRUHHHH</h1>
+                </div>
+            )
+        }
+        
 }
