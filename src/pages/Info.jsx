@@ -42,6 +42,10 @@ export default function Info() {
         ));
     };
 
+    const backButton = () => {
+        navigate('/');
+    }
+
     const paragraphs = Array.isArray(text)
         ? text.map((item, index) => (
             <p key={index}>{renderTextWithLineBreaks(item)}</p>
@@ -49,9 +53,19 @@ export default function Info() {
         : [];
     if (color != "white") {
         return (
-            <div className={styles.bluePinkPage}>
+            <>
+            <div className={styles.Overlay}>
+            <div onClick={() => backButton()} className={styles.backButton}>
+                                <p>take</p>
+                                <p>me</p>
+                                <p>back</p>
+                            </div>
+             </div>
+<div className={styles.bluePinkPage}>
+            
+            
                 <div className={styles.textHolder}>
-                    {color === "pink" ? (
+                    {color === "pink" ? ( 
                         <div className={styles.pinkText}>
                             {paragraphs}
                         </div>
@@ -64,19 +78,35 @@ export default function Info() {
                             <h1>BRUHHHH</h1>
                         </div>
                     )}
+               
                 </div>
             </div>
+            </>
+            
         );
     }
     else {
         return (
-            <div className={styles.whitePage}>
+            <>
+            <div className={styles.Overlay}>
+            <div onClick={() => backButton()} className={styles.backButton}>
+                                <p>take</p>
+                                <p>me</p>
+                                <p>back</p>
+                            </div>
+                             </div>
+<div className={styles.whitePage}>
+            
+                           
                 <div className={styles.textHolder}>
                     <div className={styles.whiteText}>
                         {paragraphs}
                     </div>
                 </div>
             </div>
+            
+            </>
+            
         )
     }
 }

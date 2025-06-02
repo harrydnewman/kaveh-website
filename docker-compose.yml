@@ -1,0 +1,8 @@
+services:
+  web:
+    build: .
+    image: harrydnewman/kaveh-website:latest
+    ports:
+      - "3000:80"  # host:container — host port 3000 → internal nginx 80
+    platform: linux/amd64
+    restart: unless-stopped

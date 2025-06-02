@@ -20,3 +20,46 @@
     font-family: "VT323", serif;
     font-size: 30px;
 }
+
+
+.Overlay {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    pointer-events: none;
+}
+
+.backButton {
+    background-color: rgba(99, 98, 98);
+    color: black;
+    right: 7%;
+    position: absolute;
+    padding: 1%;
+    width: 5%;
+    min-width: 80px;
+    font-family: "VT323", serif;
+    font-size: 40px;
+    text-align: center;
+    pointer-events: all;
+       transition: border 0.3s ease, border-radius 0.3s ease;
+}
+
+.backButton p {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.backButton:hover {
+    border-left: 2px solid  rgb(160, 160, 160);
+    border-right: 2px solid  rgb(160, 160, 160);
+    border-bottom: 2px solid  rgb(160, 160, 160);
+    border-radius: 1px;
+    cursor: pointer;
+}
+
